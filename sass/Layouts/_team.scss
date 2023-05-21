@@ -1,0 +1,177 @@
+.team {
+    .section-info {
+        margin-bottom: $mg-9;
+        text-align: center;
+
+        h2 {
+            position: relative;
+            text-transform: uppercase;
+            padding-bottom: $pd-3;
+            margin-bottom: $mg-1;
+
+            &::after {
+                @include line(-2px, 50%, 60px, 2px, $color-gray-3, -31px)
+            }
+        }
+
+        p {
+            width: 80%;
+            margin: auto;
+            line-height: $line-height-4 + 5;
+            color: $color-gray-0;
+        }
+    }
+
+    .team__item {
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            .team__info {
+                opacity: 1;
+
+                .team__social {
+                    bottom: 10%;
+                    opacity: 1;
+                }
+
+                .team__text {
+                    top: 35%;
+                    opacity: 1;
+                }
+            }
+
+        }
+
+        .team__photo {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            .team__name {
+                position: absolute;
+                right: 0;
+                bottom: 33px;
+                width: 70%;
+                background-color: $color-black-6;
+                text-align: right;
+                text-transform: uppercase;
+                padding: $pd-3 $pd-5;
+
+                h3 {
+                    font-size: $fs-1 + 1;
+                    font-weight: $fw-5;
+                    color: $color-white;
+                    margin-bottom: $mg-0 - 1;
+                }
+
+                p {
+                    font-size: $fs-1 - 1;
+                    color: $color-white-3;
+                    letter-spacing: $letter-spacing-0 - 3;
+                }
+            }
+        }
+
+        .team__info {
+            @extend %overlay__showcase;
+
+            .team__text {
+                position: absolute;
+                top: 0;
+                transform: translateY(-55%);
+                padding: 0 $pd-5;
+                opacity: 0;
+                transition: all .3s;
+
+                h3 {
+                    text-transform: uppercase;
+                    letter-spacing: $letter-spacing-0 - 1;
+                    @include styleText($color-black-1, $fs-6 - 1, $fw-1);
+                    margin-bottom: $mg-1 + 5;
+                }
+
+                p {
+                    font-size: $fs-1 + 1;
+                    color: $color-gray-0;
+                    line-height: $line-height-3;
+                }
+            }
+
+            .team__social {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                font-size: $fs-8 + 5;
+                text-align: center;
+                transform: translateY(45%);
+                opacity: 0;
+                transition: all .3s;
+
+                a {
+                    font-size: $fs-6 + 1;
+                    color: $color-black-1;
+                    margin: 0 $mg-7;
+                }
+            }
+        }
+    }
+
+    .team__promo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-white-4;
+        padding: $pd-6;
+        margin-top: $mg-10;
+
+        .team__promo-info {
+            h3 {
+                text-transform: uppercase;
+                letter-spacing: $letter-spacing-0 - 4;
+
+                span {
+                    color: $color-yellow-0;
+                }
+            }
+
+            p {
+                color: $color-gray-0;
+                margin-top: $mg-7;
+            }
+        }
+
+        .team__promo-btn {
+            margin-top: $mg-1;
+
+            .btn.btn--black {
+                white-space: nowrap;
+            }
+        }
+
+
+    }
+
+    @include responsive ("large") {
+        .team__promo {
+            width: 100%;
+
+            .team__promo-btn {
+                padding: 15px 30px;
+            }
+        }
+    }
+
+    @include responsive ("medium") {
+        .team__promo {
+            width: 100%;
+            display: block;
+
+            .team__promo-btn {
+                padding: 0;
+            }
+        }
+    }
+}

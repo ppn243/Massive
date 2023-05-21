@@ -1,0 +1,82 @@
+.design {
+    .section-info {
+        margin-bottom: $mg-3;
+        text-align: center;
+
+        h2 {
+            @include styleText($color-black-0, $fs-3, $fw-1);
+            position: relative;
+            text-transform: uppercase;
+            padding-bottom: $pd-3;
+            margin-bottom: $mg-1;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 50%;
+                width: 60px;
+                height: 2px;
+                background-color: $color-gray-3;
+                margin-left: -31px;
+            }
+        }
+
+        p {
+            width: 60%;
+            margin: auto;
+            line-height: 25px;
+            color: $color-gray-0;
+        }
+    }
+
+    .design__item {
+        position: relative;
+        border: 1px solid $color-white-1;
+        border-radius: $border-radius-0;
+        padding: $pd-0;
+
+        .design__icon {
+            position: absolute;
+            top: -30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: $border-radius-0;
+            text-align: center;
+            background-color: $color-black-1;
+            box-shadow: 0 0 0 4px $color-white;
+            line-height: $line-height-2;
+            transition: all .3s ease;
+
+            i {
+                font-size: $fs-8;
+                line-height: $line-height-2;
+                color: $color-white;
+            }
+        }
+
+        h2 {
+            font-weight: $fw-1;
+            letter-spacing: $letter-spacing-0 - 4;
+            text-transform: uppercase;
+            margin: $mg-6 0 $mg-1 0;
+            font-size: $fs-3;
+        }
+
+        p {
+            color: $color-gray-0;
+            margin-bottom: 0;
+        }
+
+        &:hover .design__icon {
+            background-color: $color-yellow-0;
+        }
+    }
+
+    @include responsive ("small") {
+        .design__item {
+            margin-bottom: $mg-8;
+        }
+    }
+}

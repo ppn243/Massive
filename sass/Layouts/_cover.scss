@@ -1,0 +1,23 @@
+.cover {
+    height: 100vh;
+    background-image: url(/img/banner.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %backgroundImg;
+    .cover__content{
+        text-align: center;
+        text-transform: uppercase;
+        h1{
+            @include styleText($color-white, $fs-0, $fw-5);
+            margin:0;
+            letter-spacing:$letter-spacing-0;
+            line-height: $line-height-1
+        }
+        h2 {
+            @include styleText($color-white, $fs-2, $fw-1);
+            margin: 0;
+            letter-spacing: $letter-spacing-0 + 1;
+        }
+    }
+}

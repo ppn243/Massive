@@ -1,0 +1,18 @@
+.row {
+    margin: 0;
+}
+
+$number:1;
+
+@for $number from 1 to 13 {
+    .col-#{$number} {
+        padding-left: $mg-1 - 5;
+        padding-right: $mg-1 - 5;
+    }
+
+    $number: $number+1;
+}
+
+.owl-carousel.owl-theme .owl-item .item {
+    margin: $mg-1;
+}

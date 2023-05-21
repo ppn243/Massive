@@ -1,0 +1,17 @@
+.btn--black {
+    background-color: $color-black-1;
+
+    &:hover {
+        background-color: $color-yellow-0;
+        color: $color-white;
+    }
+}
+
+.btn--yellow {
+    background-color: $color-yellow-0;
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-black-1;
+    }
+}

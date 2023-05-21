@@ -1,0 +1,33 @@
+//Placeholder
+%backgroundImg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+%overlay__showcase {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: $mg-1 solid $color-black-5;
+    background-color: $color-white-2;
+    text-align: center;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.btn {
+    border: 1px solid transparent;
+    border-radius: 0;
+    font-size: $pd-1;
+    line-height: 1.42857143;
+    letter-spacing: $letter-spacing-0 - 4;
+    text-transform: uppercase;
+    color: $color-white;
+    padding: $pd-1 + 3 $pd-0;
+    cursor: pointer;
+    transition: all .3s;
+}

@@ -1,0 +1,85 @@
+.skills {
+    background-image: url(/img/skills.png);
+    @extend %backgroundImg;
+
+    .skills__overlay {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 50%);
+    }
+
+    .skills__title {
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: $pd-0;
+        z-index: 1000;
+
+        h2 {
+            letter-spacing: $letter-spacing-0 + 1;
+            color: $color-white;
+            text-transform: uppercase;
+            font-size: 24px;
+            margin-bottom: 0;
+            font-weight: $fw-1;
+        }
+    }
+
+    .skills__des {
+        padding: 0 $pd-0;
+
+        h3 {
+            color: $color-white;
+            margin-bottom: $mg-6;
+            font-size: $fs-2 - 2;
+        }
+
+        &>p {
+            color: $color-white;
+            line-height: $line-height-3;
+            margin-bottom: $mg-6;
+        }
+
+        .skills__progress {
+            padding-top: $pd-0;
+
+            .progressBar {
+                &:first-child.active {
+                    .progressBar__run {
+                        width: 80%;
+                    }
+                }
+
+                &:nth-child(2).active {
+                    .progressBar__run {
+                        width: 90%;
+                    }
+                }
+
+                &:nth-child(3).active {
+                    .progressBar__run {
+                        width: 75%;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    @include responsive("medium") {
+        .skills__overlay {
+            background: transparent;
+        }
+    }
+
+    @include responsive ("small") {
+        .skills__title {
+            h2 {
+                font-size: $fs-4;
+            }
+        }
+
+    }
+}

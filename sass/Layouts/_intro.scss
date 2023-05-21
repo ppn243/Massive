@@ -1,0 +1,91 @@
+.intro {
+    background-image: url(/img/intro.png);
+    background-attachment: fixed;
+
+    .intro__nav {
+        justify-content: space-between;
+        border: 0;
+
+        .nav-item {
+            width: 18%;
+            margin: 0;
+
+            .nav-link {
+                position: relative;
+                border-radius: 0;
+                background-color: $color-white-5;
+                text-align: center;
+                color: $color-gray-12;
+                padding: $pd-0 + 5 $pd-7 - 10;
+                cursor: pointer;
+                width: 100%;
+
+                i {
+                    font-size: $fs-8 + 6;
+                }
+
+                &.active {
+                    color: $color-black-1;
+                    background-color: $color-white;
+
+                    &::after {
+                        position: absolute;
+                        bottom: -20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        content: "";
+                        display: inline-block;
+                        border-style: solid;
+                        background-color: transparent;
+                        border-width: 10px;
+                        border-top-color: $color-white;
+                        opacity: 1;
+                        border-right-color: transparent;
+                        border-left-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-pane {
+        line-height: $line-height-3;
+        padding: $pd-0 0;
+
+        .intro__title {
+            text-transform: uppercase;
+            letter-spacing: $letter-spacing-0 - 3;
+            margin-bottom: $mg-8;
+
+            p {
+                font-size: $fs-1 + 1;
+                color: $color-gray-0;
+            }
+
+            h3 {
+                font-size: $fs-8;
+            }
+        }
+    }
+
+    @include responsive("large") {
+        .intro__nav {
+            .nav-item {
+                .nav-link {
+                    padding: 35px 40px;
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .intro__nav {
+            .nav-item {
+                width: 100%;
+                .nav-link {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

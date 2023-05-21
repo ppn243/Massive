@@ -1,0 +1,35 @@
+.banner {
+    background-image: url(/img/cover.png);
+    @extend %backgroundImg;
+
+    .section-padding {
+        padding: $mg-11 0!important;
+    }
+
+    .banner__text {
+        span {
+            font-size: $fs-6 + 1;
+            color: $color-yellow-0;
+            letter-spacing: $letter-spacing-0 - 2;
+        }
+        h1{
+            font-size: $fs-8 + 6;
+            font-weight: $fw-1;
+            color: $color-white;
+            letter-spacing: $letter-spacing-0 - 3;
+            line-height: $line-height-0;
+        }
+    }
+
+    .banner__btn {
+        margin-top: $mg-8;
+    }
+
+    @include responsive ("medium") {
+        .banner__text{
+            h1{
+                font-size: 26px;
+            }
+        }
+    }
+}

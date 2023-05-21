@@ -1,0 +1,50 @@
+.progressBar {
+    height: $fs-2;
+    position: relative;
+    background-color: $color-black-3;
+    margin: $mg-7 0 $mg-8 0;
+
+    .progressBar__run {
+        height: 100%;
+        position: absolute;
+        background-color: $color-white;
+        transition: width .6s ease;
+        width: 10px;
+
+        .progressBar__counter {
+            min-width: 25px;
+            border-radius: $border-radius-1;
+            background-color: $color-gray-1;
+            position: absolute;
+            top: -23px;
+            right: -18px;
+            text-align: center;
+            font-size: $fs-5;
+            letter-spacing: 0;
+            color: $color-black-1;
+            padding: 0 $pd-1 - 4;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -7px;
+                left: 13px;
+                display: inline-block;
+                border-style: solid;
+                background-color: transparent;
+                border-width: 3.5px;
+                border-top-color: $color-gray-1;
+                color: transparent;
+            }
+        }
+    }
+
+    .progressBar__text {
+        position: absolute;
+        font-size: $fs-5;
+        color: $color-black-1;
+        letter-spacing: $letter-spacing-1 + 0.5;
+        line-height: $line-height-4;
+        padding-left: $pd-3;
+    }
+}

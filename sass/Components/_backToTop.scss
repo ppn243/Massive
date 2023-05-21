@@ -1,0 +1,30 @@
+.back-to-top {
+    .backToTop {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-color: $color-black-10;
+        text-align: center;
+        color: $color-white;
+        transform: translateY(45px);
+        visibility: hidden;
+        transition: all .3s;
+        // display: inline-block;
+        opacity: 0;
+        &.cd-top--is-visible {
+            transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+        }
+        &:hover{
+            background-color: $color-yellow-0;
+            color: $color-black-0;
+        }
+        &:focus {
+            color: $color-black-0;
+        }
+    }
+}

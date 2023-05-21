@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: $fs-6;
+    line-height: $line-height-0;
+    color: $color-black-2;
+    font-weight: $fw-1;
+}
+
+.section-padding {
+    padding: $pd-4 0;
+}
+
+li {
+    list-style: none;
+}
+
+h2,
+h3 {
+    font-size: $fs-6 + 3;
+    font-weight: $fw-1;
+    color: $color-black-0;
+    letter-spacing: $letter-spacing-0 - 3;
+    line-height: $line-height-0;
+}
+
+a {
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+::selection {
+    background-color: $color-yellow-0;
+    color: white;
+}

@@ -1,0 +1,194 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 2px $color-black-5;
+
+    .massiveNavbar {
+        justify-content: space-between;
+        background-color: $color-black-4;
+        padding: 0 $pd-0;
+        transition: all .3s ease;
+        overflow: hidden;
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            height: $fs-0 - 10;
+            padding: 0;
+            margin-right: $mg-6;
+
+            img {
+                display: inline-block;
+                padding: $pd-2 0;
+                height: 96px;
+                transition: all .3s;
+            }
+        }
+
+        .navbar-toggler {
+            padding: 10.5px 0;
+
+            i {
+                color: $color-white;
+                font-size: $fs-3 -1;
+            }
+        }
+
+        .navbar-collapse {
+            background-color: $color-white;
+            flex-grow: 0;
+
+            .nav-item {
+                margin-left: $mg-0 - 1;
+                // width: 100%;
+
+                &:hover .nav-link {
+                    color: $color-yellow-0;
+                }
+
+                &.active {
+                    .nav-link {
+                        color: $color-yellow-0;
+                    }
+
+                }
+
+                .nav-link {
+                    @include styleText($color-white, $fs-1, $fw-1);
+                    padding: 0 $pd-1;
+                    letter-spacing: $letter-spacing-1;
+                    transition: .5s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 0 0 $pd-5;
+
+
+                    span {
+                        border: none;
+                        font-size: $fs-1;
+                        padding: 0;
+                        margin-left: $mg-0;
+                    }
+
+                    i {
+                        font-size: $fs-1 - 1;
+                        margin-right: $mg-0 + 2;
+                    }
+                }
+            }
+
+            .nav-divider {
+                margin-left: $mg-0 - 1;
+                font-size: $fs-1;
+                color: $color-white;
+                text-align: center;
+                padding: 0 $pd-1;
+            }
+
+            .navbar-nav {
+                align-items: center;
+                text-transform: uppercase;
+            }
+        }
+
+        &.resize-header {
+            background-color: transparent;
+        }
+
+        &.resize-header.sz-top--is-visible {
+            background-color: $color-black-4;
+
+            .navbar-brand {
+                img {
+                    height: 62px;
+                }
+            }
+        }
+
+
+
+
+    }
+
+    @media screen and (min-width: 768px) {
+        box-shadow: none;
+
+        .massiveNavbar {
+            &.resize-header {
+                background-color: transparent;
+                padding: 0 $pd-5;
+            }
+
+            .navbar-brand {
+                height: 100%;
+                margin-right: 0;
+            }
+
+            .navbar-collapse {
+                background-color: transparent;
+
+                .nav-item {
+                    .nav-link {
+                        padding: 0 0 0 $pd-5 !important;
+                        font-size: $fs-5 + 1;
+                    }
+                }
+
+                .nav-divider {
+                    padding-left: $pd-5;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-height: 414px) {
+        .massiveNavbar {
+            .navbar-brand {
+                img {
+                    height: 46px !important;
+                }
+            }
+        }
+    }
+
+    @include responsive ("medium") {
+        .massiveNavbar {
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-item {
+
+                        width: 100%;
+
+                        &:hover .nav-link {
+                            color: $color-yellow-0;
+                        }
+
+                        &.active {
+                            .nav-link {
+                                color: $color-yellow-0;
+                            }
+
+                        }
+
+                        .nav-link {
+                            color: $color-black-1;
+                            border-bottom: 1px solid $color-white-4;
+
+                            span {
+                                border-left: 1px solid $color-white-4;
+                                font-size: $fs-2 + 2;
+                                text-align: center;
+                                padding: 5.5px 24px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

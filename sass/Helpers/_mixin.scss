@@ -1,0 +1,37 @@
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleprogressBar() {
+    height: 100%;
+    position: absolute;
+    background-color: $color-white;
+    transition: width .6s ease;
+}
+
+@mixin line($bottom, $left, $width, $height, $bg, $mg_left) {
+    content: "";
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+    width: $width;
+    height: $height;
+    background-color: $bg;
+    margin-left: $mg_left;
+}
+
+@mixin responsive($screen) {
+    @if map-has-key($map:$breakpoints, $key:$screen) {
+        $value: map-get($map: $breakpoints, $key: $screen);
+
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "`{$screen}` isn't exist in breakpoints";
+    }
+}

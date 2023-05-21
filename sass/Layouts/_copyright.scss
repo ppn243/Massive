@@ -1,0 +1,49 @@
+.copyright {
+    border-top: 1px solid $color-black-9;
+    background-color: $color-black-8;
+
+    &.section-padding {
+        padding: $pd-6 - 5 0;
+    }
+
+    .copyright__text {
+        p {
+            color: $color-gray-7;
+            margin-top: $mg-7;
+        }
+    }
+
+    .copyright__social {
+        margin-top: $mg-7;
+        text-align: right;
+
+        a {
+            margin: 0 0 0 $mg-7 + 5;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            border: 1px solid $color-gray-8;
+            border-radius: 50%;
+            text-align: center;
+            font-size: $fs-2;
+            color: $color-gray-8;
+
+            &:hover {
+                background-color: transparent;
+                background-color: $color-gray-8;
+                color: $color-white;
+            }
+        }
+    }
+
+    @include responsive("large") {
+        .copyright__social {
+            text-align: left;
+
+            a {
+                margin: 0 $mg-1 - 5 0 0;
+            }
+        }
+    }
+}
